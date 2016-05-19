@@ -1,2 +1,2 @@
 Meteor.publish 'quotes', ->
-	Quotes.find()
+	Quotes.find({ip: this.connection.clientAddress})
